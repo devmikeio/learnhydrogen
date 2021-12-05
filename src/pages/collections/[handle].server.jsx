@@ -9,7 +9,7 @@ import {useParams} from 'react-router-dom';
 import gql from 'graphql-tag';
 
 import LoadMoreProducts from '../../components/LoadMoreProducts.client';
-import Layout from '../../components/Layout.server';
+import Layout from '../../../components/layouts/Layout.server';
 import ProductCard from '../../components/ProductCard.server';
 import NotFound from '../../components/NotFound.server';
 
@@ -65,7 +65,6 @@ const QUERY = gql`
     $handle: String!
     $country: CountryCode
     $numProducts: Int!
-    $includeReferenceMetafieldDetails: Boolean = false
     $numProductMetafields: Int = 0
     $numProductVariants: Int = 250
     $numProductMedia: Int = 6
